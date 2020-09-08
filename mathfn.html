@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>maths functions</title>
+	<meta charset="utf-8">
+</head>
+<body>
+	<h1>JavaScript Math.PI</h1>
+	<p>Math.PI returns the ratio of a  circles circumference to its diameter :  </p>
+	<p id="demo"></p>
+	<p id="bro"></p>
+	<p id="gro"></p>
+	<script type="text/javascript">
+		document.getElementById('demo').innerHTML=Math.PI;
+		
+		document.write("4.6 rounded by the value: "+""+Math.round(4.6));
+		document.write("<br><br>");
+
+		document.write("4.3 rounded by the value: "+""+Math.round(4.3));
+		document.write("<br><br>");
+
+		document.write("5 power of 4 is : "+""+Math.pow(5,4));
+		document.write("<br><br>");
+
+		document.write("square root of 9 is : " + ""+Math.sqrt(9));
+		document.write("<br><br>");
+
+		document.write("absolute +ve value of -4.7 is :"+"   "+" "+Math.abs(-4.7));
+		document.write("<br><br>");
+
+		document.write("math.ceil() retruns the value of x rounded up to its nearest int ex ,4.4 :"+" "+Math.ceil(4.4));
+		document.write("<br><br>");
+
+		document.write("math.floor() retruns the value of x rounded down to its nearest int ex ,4.8 :"+" "+Math.floor(4.8));
+		document.write("<br><br>");
+
+		document.getElementById("bro").innerHTML = "The sine value of 90 degrees is " + Math.sin(90 * Math.PI / 180);
+
+		document.getElementById("gro").innerHTML = "The cosine value of 0 degrees is " + Math.cos(0 * Math.PI / 180);
+
+		document.write("math.max() returns highest value in the list of arguments :" +" "+Math.max(0, 150, 30, 20, -8, -200));
+		document.write("<br><br>");
+
+		document.write("math.min() returns highest value in the list of arguments :" +" "+Math.min(0, 150, 30, 20, -8, -200));
+		document.write("<br><br>");
+
+		document.write("math.random returns the value between 0 and 1 : " +" "+Math.random());
+	</script>
+</body>
+</html>
