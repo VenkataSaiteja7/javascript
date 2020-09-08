@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>functions</title>
+	<meta charset="utf-8">
+</head>
+<body>
+	<script type="text/javascript">
+		
+		function multiply(a,b)
+		{
+			return a*b;
+		}
+
+		document.write("multiplication of 4 and 5 is : " + ""+multiply(4,5));
+		document.write("<br><br>");
+		document.write("multiplication of 6 and 7 is : " + ""+multiply(6,7));
+		document.write("<br><br>");
+
+		//, if no value is provided for b when multiply is called, b's value would be undefined when evaluating a * b and multiply would return NaN.
+
+		function multiply(a,b)
+		{
+			b=(typeof b !=='undefined')?b:1;
+			return a*b;
+		}
+		document.write("mulplication of 7 and 8 is : " + "" + multiply(7,8));
+		document.write("<br><br>");
+		document.write("multiplication of 5 and default value is : "+ "" + multiply(9));
+		document.write("<br><br>");
+		
+		function test(num = 1) {
+			return typeof num;
+		}
+		document.write("type of a default value is : "+ "" +test()); 
+		document.write("<br>") ;
+		document.write("type of a value is : "+ "" +test(undefined));       
+
+		//The default argument is evaluated at call time. So, unlike (for example) Python, a new object is created each time the function is called.	
+
+		function append(value, array = []) {
+			array.push(value);
+			return array;
+		}
+		append(50);
+		document.write("<br>");
+		document.write("value pushed to array " + ""+append(50));
+		document.write("<br>");
+		document.write("value pushed to array " + "" +append(566));
+		document.write("<br><br>");
+
+		//This even applies to functions and variables:
+
+		function callsomething(thing = something())
+		{
+			return thing;
+		}
+		let numberoftimescalled=0;
+		function something()
+		{
+			numberoftimescalled+=1;
+			return numberoftimescalled;
+		}
+		document.write("number of times called is : "+ "" +callsomething());
+		document.write("<br>");
+		document.write("number of times called is : "+ "" +callsomething());
+		document.write("<br>");
+
+		function activity()
+		{
+			return "<a href=https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Functions/Default_parameters>link</a> ";
+		}
+		document.write("go through the links provided and practice what you have learnt : "+""+	activity());
+
+	</script>
+</body>
+</html>
