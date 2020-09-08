@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>Details</title>
+	<meta charset="utf-8">
+</head>
+<body>
+	<h1>Data types concept : </h1>
+	<p>when adding number and a string javascript treat number as string : </p>
+	<script type="text/javascript">
+	//javascript Data types
+	var val = 2+"addingstring";
+	document.write("val is : " + " "+""+val);
+	document.write("<br> <br><br>");
+
+	var x = "firststring" + 5;
+	document.write(x);
+	document.write("<br><br><br>");
+
+	var y = 37+3+"Saiteja";
+	document.write("javascript Evaluates expressions from left to right : " + y);
+	document.write("<br><br>");
+
+	var y = "Saiteja"+45+5;
+	document.write("Here the first operand is string so, the whole expression is considered as string : " + y);
+	document.write("<br><br>");
+
+	var x;         // Now x is undefined
+	x = 5;         // Now x is a Number
+	x = "John";      // Now x is a String
+	document.write(x);
+	document.write("<br><br>");
+
+	var a=[1,2,3,4,5];
+	document.write("converted number to string at index 3  is = " +" " + a[2].toString());
+
+
+
+	</script>
+</body>
+</html>
