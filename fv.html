@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title> form validation</title>
+	<meta charset="utf-8">
+</head>
+<body>
+	<form  name="myForm" onsubmit="return phonenumber()"  method="post">
+		<label for="fname">Name</label><br>
+		<input type="text" name="fname" ><br><br>
+
+		<label for="phone">Phone number</label><br>
+		<input type="tel" name="phone" id="phone"><br><br>
+
+		<h5>description</h5>
+		<textarea name="description" rows="5" cols="20">Bachelors degree is for 4 years, After completion of Bachelors degree you can go for Master degree the time span for masters degree is 2 years</textarea><br><br>
+
+
+
+		<label for="name">choice of course </label><br>
+		<input type="radio" name="Name" id=name	value="name">
+
+		<label for="Name">Batchelors</label><br>
+		<input type="radio" name="Name" >
+
+		<label for="Name">Masters</label><br><br>
+		<label for="name">Subject Interests</label><br>
+
+
+		<input type="checkbox" name="name" id="name">
+		<label for="name">Artificial Intelligence</label><br>
+
+		<input type="checkbox" name="name" id="name">
+		<label for="name">Machine Learning</label><br>
+
+		<input type="checkbox" name="name" id="name">
+		<label for="name">Data Science & Analytics</label><br>
+
+		<input type="checkbox" name="name" id="name">
+		<label for="name">Robotics</label><br><br>
+
+		<input type="submit" value="submit">
+
+	</form>
+
+	<script>
+
+		function phonenumber()
+			{
+				var phone = document.forms["myForm"]["phone"].value;
+				var phoneNum = phone.replace(/[^\d]/g, '');
+				if(phoneNum.length > 9 && phoneNum.length < 11) 
+					{  
+						return true; 
+					}
+				else
+				{
+					alert("Not a valid Phone Number");
+					return false;
+				}
+			}
+
+	</script>
+</body>
+</html> 
