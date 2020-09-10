@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>JavaScript Events</title>
+	<meta charset="utf-8">
+</head>
+<body>
+	<p id="demo"></p>
+	<button onclick="document.getElementById('demo').innerHTML=Date()">what's the date</button>
+	<br><br><br>
+	<button onclick="this.innerHTML=Date()"> the time is</button>
+	<br><br><br>
+	<button onclick="displaydate()">Time</button>
+	<p id="remo"></p>
+	<script type="text/javascript">
+		function displaytime()
+		{
+			document.getElementById('remo').innerHTML = Date();
+		}
+	</script>
+</body>
+</html>
