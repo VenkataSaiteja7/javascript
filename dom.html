@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>	
+	<title>Document Object Method</title>
+	<meta charset="utf-8">
+</head>
+<body>
+	<p id="demo"></p>
+
+	<div id="main">
+		<p>The DOM is very useful</p>
+		<p>This example demonstrates the <b>getElementByTagName</b>method</p>
+	</div>
+
+	<p id="sai"></p>
+	<p class="intro">This example demonstrates the <b>querySelectorAll</b> method.</p>
+
+	<p id="remo"></p>
+
+	<h1>Finding HTML Elements using document.forms</h1>
+
+	<form name="frm1" action="empty.html" method="post" target="blank">
+		First Name : <input type="text" name="fname" value="Venkata">
+		Second Name : <input type="text" name="lname" value="Saiteja">
+		<input type="submit" value="submit">
+	</form>
+	<p>click "Try it "  to display the value of each  elements in the form </p>
+
+	<button  onclick="myFunction()">Try it</button>
+
+	<p id="gimo"></p>
+
+	<button onclick="document.getElementById('demo').innerHTML=Date()">The time is?</button>
+
+	<p id="demo"></p>
+
+	<script type="text/javascript">
+		// Method and Propeties 
+		document.getElementById('demo').innerHTML="Hello World!";
+		//finding Elements by id and tagname
+		var x=document.getElementById('main');
+		var y= x.getElementsByTagName("p");
+		document.getElementById('sai').innerHTML="The first paragraph (index0 ) inside  main is :  "+ y[0].innerHTML;
+
+		var x = document.querySelectorAll("p.intro");
+		document.getElementById("remo").innerHTML = 'The first paragraph (index 0) with class="intro": ' + x[0].innerHTML;
+
+		function myFunction() {
+			var x = document.forms["frm1"];
+  			var text = "";
+  			var i;
+  			for (i = 0; i < x.length ;i++) {
+  				text += x.elements[i].value + "<br>";
+  			}
+  			document.getElementById("demo").innerHTML = text;
+
+  		}
+	</script>
+</body>
+</html>
