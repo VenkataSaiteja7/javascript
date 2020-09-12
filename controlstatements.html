@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>Contorl Statements</title>
+	<meta charset="utf-8">
+</head>
+<body>
+	<p>Display "Good Day " if hour is less than 18:00</p>
+	<p id="demo">Good Evening</p>
+	<p>Click the button to get time-based greeting</p>
+	<button onclick="MyFunction()">Try Me Bro</button>
+	<br><br>
+
+	<p>Please Click the below button to get what day today is : </p>
+	<button onclick="sfn()">Hit me Bro</button><br><br>
+	<p>please Click the below button to get list of cars using for loop :</p>
+	<button onclick="forfn()">Touch me </button><br><br>
+
+	<p>try the button below to know about for-in loop</p>
+	<button onclick="forinfn()">use me</button><br><br>
+
+	<p>Click the button below to know about while fn</p>
+	<button onclick="wfn()">press me!!</button>
+	<br><br>
+	<script type="text/javascript">
+		if (new Date().getHours()<19) 
+		{
+			document.getElementById('demo').innerHTML="Good Morning Hyderabad";
+		}
+		// function for if,else-if ,else 
+		function MyFunction()
+		{
+			var greeting;
+			var time=new Date().getHours();
+			if (time<10) {
+				greeting="Hey! Good Morning Bro";
+			}
+			else if(time<20) {
+				greeting="Hello ,Good Day Bro";
+			}
+			else
+			{
+				greeting='Good Night';
+			}
+			document.write(greeting);
+		}
+
+		//function for switch case
+		function sfn()
+		{
+			var day;
+			switch(new Date().getDay()) 
+			{
+				case 0:
+				day="Monday";
+				break;
+
+				case 1:
+				day="Tuesday";
+				break;
+
+				case 2:
+				day="Wednesday";
+				break;
+
+				case 3:
+				day="Thursday";
+				break;
+
+				case 4:
+				day="Friday";
+				break;
+
+				case 5:
+				day="Saturday";
+			}
+			document.write(day);
+		}
+
+		//using for loop
+		function forfn()
+		{
+			var car=['BMW','Volvo','Saab','Ford','Fiat','Audi'];
+			var text="";
+			var i;
+			for (var i = 0; i < car.length; i++) {
+				text+= car[i]+"<br>";
+			}
+			document.write(text);
+		}
+
+		//for in loop
+		function forinfn()
+		{
+			var txt="";
+			var person=['venkata','saiteja','21'];
+			var x;
+			for (x in person) {
+				txt+=person[x]+" ";
+			}
+			document.write(txt);
+		}
+		//while loop
+		function wfn() {
+			var text="";
+			var x=0;
+			while(x<10)
+			{
+				text += "The no   is " + x +"<br>";
+				x++;
+			}
+			document.write(text);
+		}
+		function fibonacci(num){
+			if (num==1)
+			{
+				return 0;
+			}
+			if (num==2) {
+				return 1;
+			}
+			return fibonacci(num - 1)+fibonacci(num-2);
+		}
+		document.write("fibonacci(5) is : "+" "+fibonacci(5)+"<br>");
+		document.write("fibonacci(6) is : "+" "+fibonacci(8)+"<br>");
+
+	</script>
+</body>
+</html>
