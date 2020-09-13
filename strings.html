@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>Javscript Strings</title>
+	<meta charset="utf-8">
+</head>
+<body>
+	<script>
+		var x="This is a string";
+		document.write(x);
+		document.write("<br><br>");
+
+		var x='This is a string with single quote';
+		var y="This is a string with double quotes";
+		document.write(x + "<br>" + y);
+		document.write("<br><br>");
+
+		var x="we can use a 'single qoute' inside a string";
+		var y='we can use a "double quote" inside a string';
+		document.write(x +"<br><br>"+ y);
+		document.write("<br><br>");
+
+		var x="we can find a length of a string using length property";
+		document.write("By using length property the length of a string is : "+"	"+x.length);
+		document.write("<br><br>");
+
+		var x="Escape characters are used to transform \"special\" cahracters into sting characters ";
+		document.write(x);
+		document.write("<br><br>");
+
+		var x="we can display escape character by using double \\ escape characters ";
+		document.write(x);	
+
+		function myfn(){
+			var x="ram";
+			var y=new String ("ram");
+			if(x==y) return true;
+		}
+		document.write("<br><br>");
+		document.write(myfn());
+		document.write("<br><br>");
+
+		document.write("comparing string with === operator");
+		document.write("<br><br>");
+		
+		function rf(){
+			var k="saiteja";
+			var l=new String ("saiteja");
+			if(k===l) return true;
+		}
+		
+		document.write("<br><br>");
+		document.write(rf());
+		document.write("<br><br>");
+
+		var str="please locate where 'locate' occurs!";
+		var pos=str.indexOf("locate");
+		document.write(pos);
+
+		document.write("<br><br>");
+		var str="please locate where 'locate' occurs!";
+		var pos2=str.lastIndexOf("locate");
+		document.write(pos2);
+		document.write("the indexOf() and lastIndexOf() will return -1 if no text found in a string");
+		document.write("<br><br>");
+		var str="please locate where 'locate' occurs!";
+		var pos11=str.indexOf("sai");
+		var pos1=str.lastIndexOf("sai");
+		document.write(pos11 +" " +pos1);
+
+		document.write("<br><br>");
+		var x="Apple, Banana, Strawberry";
+		var res=x.slice(7,14);
+		document.write(res);
+		document.write("<br><br>");	
+		document.write("slice() method extracts a part of a string and returns the extracted part in a new string");
+
+		document.write("<br><br>");
+		var y="Apple, Banana, Strawberry";
+		var ewa=x.slice(-6,-15);	
+		document.write("If the parameter is negative , the position of a string is counted from end of a string");
+		document.write("<br><br>");
+		document.write(res);
+		document.write("<br><br>");
+		var l="Share your GitHub commit url in the space given below";
+		var result=l.substr(5,7,10);
+		dcoument.write(result);
+
+
+	</script>
+</body>
+</html>
