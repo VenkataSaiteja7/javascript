@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>Learning jQuery</title>
+	<meta charset="utf-8">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+</head>
+<body>
+	<div class="bg-warning">
+	<h1>This is My First Heading in Jquery</h1>
+	<p>Hello Jquery World!</p>
+	<P>By clicking the button p elements will hide</P>
+	<button>Hide</button>
+	<button id="hide">show</button><br><br>
+	
+	<p id="id">this is a para</p>
+	<button id="btn">Hide Me</button><br>
+	
+	<p id="bok">this for hiding the present paragraph</p>
+	<button id="rock">this</button><br>
+	
+	<p class="fd">If you double click on me i will disappear</p>
+	<p class="fd">Same Here also</p>
+	<p class="fd">Do it again</p><br><br>
+
+	<p id="di">when mouse-enter here this paragraph will alert one message for you</p><br><br>
+
+	<p id="didi">if you leave from this paragraph you will get one message</p><br><br>
+
+	<p id="md">when you click left or midle or right button of your mouse you will get one message</p><br><br>
+
+	<p id="mup">when you release left or midle or right button of your mouse you will get one message</p><br><br>
+
+	<p id="mhv">when you done the combination of mouseenter and mouseleaver operations at the same time you will get one alert!</p><br><br>
+	
+	Name<input type="text" name="fullname" style="margin-left: 5px;"><br>	
+	Email<input type="Email" name="email" style="margin-left: 9px;"><br><br>
+
+	<p class="on" style="background-color: red; width: 40%;">The on method attaches one or more event handlers to the selected elements</p>
+	<p class="on" style="background-color:red; width: 40%;">If you click on me i will disappear</p><br>
+
+	<p id="mhd">click or move the mouse pointer over this paragraph </p><br>
+	<p class="tg">This paragraph defines toggle method</p>
+	<p class="tg">By using toggle method you can display the hided text or you can hide the  displayed text</p>
+	<button id="tb">you can toggle by cliking this toggle button</button><br><br>
+	<p id="fp">this paragraph demonstrates about fadeIn() method</p>
+	<button id="fb">FadeIn</button>
+	<button id="fd">fadeOut</button>
+	<button id="ft">fadeToggle</button><br>
+	<button id="fdt">fadeTo</button>
+
+	<div id="div1" style="width: 80px; height: 80px; display: none; background-color: red;"></div>
+	<div id="div2" style="width: 80px; height: 80px; display: none; background-color: green;"></div>
+	<div id="div3" style="width: 80px; height: 80px; display: none;
+	background-color: blue;"></div>
+	<script>
+
+		//hiding paragraph using HTML element
+		$(document).ready(function(){
+			$("button").click(function(){
+				$("p").hide();
+			});
+		});
+
+		//hiding paragraph using HTML id 
+		$(document).ready(function(){
+			$("#hide").click(function(){
+				$("p").show();
+			});
+		});
+		//Selects all elements 
+		$(document).ready(function(){
+			$("#btn").click(function(){
+				$("*").hide();
+			});
+		});
+		//this keyword uses for current element
+		$(document).ready(function(){
+			$("#rock").click(function(){
+				$(this).hide();
+			});
+		});
+		//double click 
+		$(document).ready(function(){
+			$(".fd").dblclick(function(){
+				$(this).hide();
+			});
+		});
+		//mouseenter method
+		$(document).ready(function(){
+			$("#di").mouseenter(function(){
+				alert("Hey!, you entered into this paragraph");
+			});
+		});
+		//mouseleave method
+		$(document).ready(function(){
+			$("#didi").mouseleave(function(){
+				alert("Bro, You are leaving this paragraph");
+			});
+		});
+		//mousedown method
+		$(document).ready(function(){
+			$("#md").mousedown(function(){
+				alert("Bro,you mousedwon over this paragraph");
+			});
+		});
+		//mouseup method
+		$(document).ready(function(){
+			$("#mup").mouseup(function(){
+				alert("Bro,You mouse up this paragraph");
+			})
+		})
+		//mouse hover method 
+		$(document).ready(function(){
+			$("#mhv").hover(function(){
+				alert("hey! Bro, you entered into this paragraph....");
+			},
+			function(){
+				alert("Bro,you are leaving from this paragraph.........");
+			})	;
+		});
+		//focus and blur methods
+		$(document).ready(function(){
+			$("input").focus(function(){
+				$(this).css("background-color","green");
+			});
+			$("input").blur(function(){
+				$(this).css("background-color","violet");
+			});
+		});
+		//on method
+		$(document).ready(function(){
+			$(".on").on("click",function(){
+				$(this).hide();
+			});
+		});
+		//multiple event handlers
+		$(document).ready(function(){
+			$("#mhd").on({
+				mouseenter:function(){
+					$(this).css("background-color",	"lightgray");
+				},
+				mouseleave:function(){
+					$(this).css("background-color","lightblue");
+				},
+				click:function(){
+					$(this).css("background-color","dodgerblue");
+				}
+			});
+		});
+		$(document).ready(function(){
+			$("#tb").click(function(){
+				$(".tg").toggle();
+			});
+		});	
+		$(document).ready(function(){
+			$("#fb").click(function(){
+				$("#div1").fadeIn();
+				$("#div2").fadeIn("slow");
+				$("#div3").fadeIn(2000);
+			});
+		});	
+		$(document).ready(function(){
+			$("#fd").click(function(){
+				$("#div1").fadeOut();
+				$("#div2").fadeOut("slow");
+				$("#div3").fadeOut(2000);
+			});
+		});
+		$(document).ready(function(){
+			$("#ft").click(function(){
+				$("#div1").fadeToggle();
+				$("#div2").fadeToggle("slow");
+				$("#div3").fadeToggle(2000);
+			});
+		});		
+		$(document).ready(function(){
+			$("#fdt").click(function(){
+				$("#div1").fadeTo("slow",0.15);
+				$("#div2").fadeTo("slow",0.4);
+				$("#div3").fadeTo("slow",0.7);
+			});
+		});		
+	</script>
+	</div>
+</body>
+</html>
